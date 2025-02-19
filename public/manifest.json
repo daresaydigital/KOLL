@@ -1,0 +1,21 @@
+{
+    "name": "KOLL",
+    "short_name": "KOLL",
+    "description": "A PWA app",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ECFCCB",
+    "theme_color": "#FFFFFF",
+    "icons": [
+      {
+        "src": "/icon.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/splash.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
