@@ -1,114 +1,19 @@
 # local_backend: true
 backend:
-  open_authoring: true
   name: git-gateway
-  repo: https://github.com/DanielssonWilliam/Climate-View-Portal-Test
+  repo: https://github.com/daresaydigital/KOLL
   branch: main
-site_url: https://climateviewportal.netlify.app
+site_url: https://koll-app.netlify.app/
 publish_mode: editorial_workflow
 media_folder: src/assets/
 collections:
-  - name: serviceModules
-    label: Service Modules
-    folder: src/content/service-modules
+  - name: posts
+    label: Posts
+    folder: src/content/posts
     create: true
-    slug: '{{slug}}'
-    fields:
-    - { name: 'tag', label: 'Module ID', widget: 'string' }
-    - { name: 'title', label: 'Title', widget: 'string' }
-    - { name: 'description', label: 'Description', widget: 'text', required: false}
-    - {name: brochure, label: Brochure, widget: object, fields: [
-        {name: href, label: Link, widget: string},
-        {name: description, label: Description, widget: string, required: false},
-        {name: filetype, label: File Type, widget: 'select', options: ['pdf']},
-    ]}
-    - { name: 'pitch', label: 'Pitch', widget: 'object', fields: [
-        { name: 'video', label: 'Video', widget: 'object', fields: [
-          { name: 'href', label: 'Video Link', widget: 'string' },
-          { name: 'description', label: 'Description', widget: 'string', required: false},
-          { name: 'filetype', label: 'File Type', widget: 'select', options: ['video'] },
-        ]},
-        { name: 'ppt', label: 'PowerPoint', widget: 'object', fields: [
-          { name: 'href', label: 'PPT Link', widget: 'string' },
-          { name: 'description', label: 'Description', widget: 'string', required: false},
-          { name: 'filetype', label: 'File Type', widget: 'select', options: ['powerpoint'] },
-        ]},
-      ]}
-    - { name: 'podcast', label: 'Podcast', widget: 'object', fields: [
-        { name: 'href', label: 'Podcast Link', widget: 'string' },
-        { name: 'description', label: 'Description', widget: 'string', required: false},
-        { name: 'filetype', label: 'File Type', widget: 'select', options: ['audio'] },
-      ]}
-    - { name: 'body', label: 'Content', widget: 'markdown', required: false}
-  - name: 'sidebar'
-    label: 'Sidebar'
-    folder: 'src/content/sidebar'
-    create: false
-    slug: 'sidebar'
-    fields:
-      - {name: 'title', label: 'Title', widget: 'string'}
-      - { name: 'entries', label: 'Sidebar Entries', widget: 'list', fields: [
-          { name: 'discriminant', label: 'Discriminant', widget: 'select', options: ['link', 'group'] },
-          { name: 'value', label: 'Value', widget: 'object', fields: [
-              { name: 'title', label: 'Title', widget: 'string' },
-              { name: 'children', label: 'Children', widget: 'list', fields: [
-                  { name: 'discriminant', label: 'Discriminant', widget: 'select', options: ['link', 'group'] },
-                  { name: 'value', label: 'Value', widget: 'object', fields: [
-                      { name: 'title', label: 'Title', widget: 'string' },
-                      { name: 'url', label: 'URL', widget: 'string' },
-                  ]},
-                ]},
-            ]},
-        ]}
-  - name: 'marketingKit'
-    label: 'Marketing Kit'
-    folder: 'src/content/marketingKit'
-    create: true
-    slug: '{{slug}}'
-    fields:
-      - { name: 'title', label: 'Title', widget: 'string'}
-      - { name: 'tag', label: 'Tag', widget: 'string'}
-      - { name: 'description', label: 'Description', widget: 'string', required: false}
-      - { name: 'categories', label: 'Categories', widget: 'list', fields: [
-          { name: 'title', label: 'Category Title', widget: 'string' },
-          { name: 'assets', label: 'Assets', widget: 'list', fields: [
-              { name: 'description', label: 'Description', widget: 'string', required: false},
-              { name: 'filetype', label: 'File Type', widget: 'select', options: ['pdf', 'powerpoint', 'word', 'excel', 'zip', 'audio'] },
-              { name: 'href', label: 'File Link', widget: 'string' },
-            ]},
-        ]}
-  - name: 'articles'
-    label: 'Articles'
-    folder: 'src/content/articles'
-    create: true
-    slug: '{{slug}}'
-    fields:
-      - { name: 'title', label: 'Title', widget: 'string' }
-      - { name: 'description', label: 'Description', widget: 'text', required: false}
-      - { name: 'tag', label: 'Tag', widget: 'string' }
-      - { name: 'attachments', label: 'Attachments', widget: 'list', fields: [
-          {name: 'description', label: 'Description', widget: 'text', required: false},
-          {name: 'href', label: 'File Link', widget: 'string'},
-          {name: 'filetype', label: 'File Type', widget: 'select', options: ['pdf', 'powerpoint', 'word', 'excel', 'zip', 'audio', 'video'] },
-      ]}
-      - { name: 'body', label: 'Content', widget: 'markdown', required: false}
-  - name: 'academy' 
-    label: 'Academy'
-    folder: 'src/content/academy' 
-    create: true
-    slug: '{{slug}}'
-    fields:
-      - { name: 'tag', label: 'Module ID', widget: 'string' }
-      - { name: 'title', label: 'Title', widget: 'string' }
-      - { name: 'description', label: 'Description', widget: 'text', required: false}
-      - { name: 'video', label: 'Video', widget: 'object', fields: [
-          { name: 'href', label: 'Video Link', widget: 'string' },
-          { name: 'description', label: 'Description', widget: 'string', required: false},
-          { name: 'filetype', label: 'File Type', widget: 'select', options: ['video'] },
-        ]}
-      - { name: 'ppt', label: 'PowerPoint', widget: 'object', fields: [
-          { name: 'href', label: 'PPT Link', widget: 'string' },
-          { name: 'description', label: 'Description', widget: 'string', required: false},
-          { name: 'filetype', label: 'File Type', widget: 'select', options: ['powerpoint'] },
-        ]}
-      - { name: 'body', label: 'Content', widget: 'markdown', required: false}
+    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Rating (scale of 1-5)", name: "rating", widget: "number" }
+      - { label: "Body", name: "body", widget: "markdown" }
