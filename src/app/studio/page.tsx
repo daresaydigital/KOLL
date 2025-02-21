@@ -17,9 +17,13 @@ export default function Admin() {
         strategy="afterInteractive"
       />
 
+      <Script
+        src="../cms-previews/cms.js"
+        strategy="afterInteractive"
+      />
+
       {/* Content Area */}
       <body>
-        <script src="../cms-previews/cms.js"></script>
       </body>
     </>
   );
