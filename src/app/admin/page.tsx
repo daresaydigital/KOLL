@@ -10,11 +10,6 @@ export default function Admin() {
         {/* Netlify Identity Widget */}
         <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
       </Head>
-
-      <body>
-        {/* Decap CMS script (must be inside body) */}
-        <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-      </body>
     </>
   );
 }
