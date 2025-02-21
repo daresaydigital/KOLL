@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Script from "next/script";
-import styles from "./NetlifyRegistrationWidget.module.css"
+import styles from "./NetlifyRegistrationWidget.module.css";
 
 export default function NetlifyRegistrationWidget() {
   return (
@@ -14,9 +14,9 @@ export default function NetlifyRegistrationWidget() {
         src="https://identity.netlify.com/v1/netlify-identity-widget.js"
         strategy="afterInteractive"
       />
-        <div data-netlify-identity-menu>
-            <p className={styles.decapTitle}>Decap CMS Portal</p>
-        </div>
+      <div data-netlify-identity-menu>
+        <p className={styles.decapTitle}>Decap CMS Portal</p>
+      </div>
     </>
   );
 }

@@ -1,5 +1,4 @@
 html,
-
 #root {
   margin: 0 auto;
 }
@@ -26,19 +25,19 @@ a {
 }
 
 @font-face {
-  font-family: 'Inter';
-  src: url('/fonts/Inter-Regular.woff');
+  font-family: "Inter";
+  src: url("/fonts/Inter-Regular.woff");
   font-weight: 400; /* Normal weight */
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Inter';
-  src: url('/fonts/Inter-Bold.woff'); /* Make sure to add the correct path */
+  font-family: "Inter";
+  src: url("/fonts/Inter-Bold.woff"); /* Make sure to add the correct path */
   font-weight: 700; /* Bold weight */
   font-style: normal;
 }
 
 body {
-  font-family: 'Inter', sans-serif;  /* Use the font in body or other elements */
+  font-family: "Inter", sans-serif; /* Use the font in body or other elements */
 }
