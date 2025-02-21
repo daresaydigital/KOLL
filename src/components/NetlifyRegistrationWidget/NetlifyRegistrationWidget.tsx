@@ -7,7 +7,6 @@ export default function NetlifyRegistrationWidget() {
     <>
       <Head>
         <title>Content Manager</title>
-        <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
       </Head>
 
       {/* Netlify Identity Widget (loads after page is interactive) */}
