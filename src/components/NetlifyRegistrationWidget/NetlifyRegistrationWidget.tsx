@@ -14,13 +14,9 @@ export default function NetlifyRegistrationWidget() {
         src="https://identity.netlify.com/v1/netlify-identity-widget.js"
         strategy="afterInteractive"
       />
-
-      {/* Content Area */}
-      <body>
         <div data-netlify-identity-menu>
             <p className={styles.decapTitle}>Decap CMS Portal</p>
         </div>
-      </body>
     </>
   );
 }

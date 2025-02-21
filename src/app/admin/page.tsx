@@ -17,14 +17,10 @@ export default function Admin() {
         strategy="afterInteractive"
       />
 
-      <Script
-        src="../cms-previews/cms.js"
-        strategy="afterInteractive"
-      />
+      <Script src="/cms-previews/cms.mjs" strategy="afterInteractive" type="module" crossOrigin="anonymous"/>
 
-      {/* Content Area */}
-      <body>
-      </body>
+      <p>Heey</p>
+      <div id="cms"></div>
     </>
   );
 }
