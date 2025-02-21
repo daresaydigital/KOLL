@@ -8,6 +8,7 @@ export default function Admin() {
         <title>Content Manager</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="noindex" />
+        <link href="/admin/config.yml" type="text/yaml" rel="cms-config-url" />
       </Head>
 
       {/* Netlify Identity Widget (loads after page is interactive) */}
@@ -16,16 +17,10 @@ export default function Admin() {
         strategy="afterInteractive"
       />
 
-      {/* Decap CMS script (loads after page is interactive) */}
-      <Script
-        src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"
-        strategy="afterInteractive"
-      />
-
       {/* Content Area */}
-      <div>
-        <h1>Decap CMS Admin Panel</h1>
-      </div>
+      <body>
+        <script src="../cms-previews/cms.js"></script>
+      </body>
     </>
   );
 }

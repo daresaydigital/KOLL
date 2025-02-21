@@ -1,10 +1,12 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import NetlifyRegistrationWidget from "@/components/NetlifyRegistrationWidget/NetlifyRegistrationWidget";
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
+        <NetlifyRegistrationWidget />
         <Image
           className={styles.logo}
           src="/next.svg"
